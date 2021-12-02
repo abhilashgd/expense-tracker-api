@@ -25,3 +25,6 @@
 //inside postgresdb commands 
 # \connect expensetrackerdb
 # select * from et_users
+
+//Login to save container info 
+% docker login
