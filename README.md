@@ -28,3 +28,19 @@
 
 //Login to save container info 
 % docker login
+
+
+
+/***** POSTMAN API CALL *****/
+
+POST: http://localhost:8080/api/users/register
+
+BODY: 
+  RAW JSON: 
+{
+    "firstName": "abhilash",
+    "lastName": "gd",
+    "email": "abhilashgd@abhilashgd.com",
+    "password": "test123"
+}
+
