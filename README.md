@@ -33,7 +33,7 @@
 
 
 /***** POSTMAN API CALL *****/
-
+//for user registering
 POST: http://localhost:8080/api/users/register
 
 BODY: 
@@ -41,7 +41,20 @@ BODY:
 {
     "firstName": "abhilash",
     "lastName": "gd",
-    "email": "abhilashgd@abhilashgd.com",
-    "password": "test123"
+    "email": "abhilashgd@test.com",
+    "password": "test1234"
 }
 
+//for login
+POST: http://localhost:8080/api/users/login
+{
+    "email":"abhilashgd@test.com",
+    "password":"test1234"
+}
+
+//password encryption dependency
+<dependency>
+			<groupId>org.mindrot</groupId>
+			<artifactId>jbcrypt</artifactId>
+			<version>0.4</version>
+		</dependency>
