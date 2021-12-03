@@ -18,8 +18,9 @@ public class UserServiceImpl implements UserService{
 	UserRepository userRepository;
 	@Override
 	public User validateUser(String email, String password) throws EtAuthException {
-		// TODO Auto-generated method stub
-		return null;
+		if(email != null) email = email.toLowerCase();
+		
+		return userRepository.findByEmailAndPassword(email, password);
 	}
 
 	@Override
@@ -32,7 +33,8 @@ public class UserServiceImpl implements UserService{
 		if(!pattern.matcher(email).matches())
 			throw new EtAuthException("Invalid email format");
 		Integer count = userRepository.getCountByEmail(email);
-		if(count>0) throw new EtAuthException("Email Already in Use");
+		if(count>0) 
+			throw new EtAuthException("Email Already in Use");
 		Integer userId = userRepository.create(firstName, lastName, email, password);
 		return userRepository.findById(userId);
 		}
