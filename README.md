@@ -21,10 +21,11 @@
 
 // for docker terminal 
  % docker container exec -it postgresdb bash
- 
+ // to run psql inside docker terminal
+ # psql -U postgres --file expensetracker_db.sql
 //inside postgresdb commands 
 # \connect expensetrackerdb
-# select * from et_users
+# select * from et_users;
 
 //Login to save container info 
 % docker login
