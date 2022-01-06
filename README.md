@@ -59,3 +59,5 @@ POST: http://localhost:8080/api/users/login
 			<artifactId>jbcrypt</artifactId>
 			<version>0.4</version>
 		</dependency>
+		
+OTHER LINKS: https://www.mockaroo.com/  //DATA Generator and API Mocking tool
